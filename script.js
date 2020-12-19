@@ -13,18 +13,19 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// declare variables
+// declare constants
 var lengthMinimum = 8;
 var lengthMaximum = 128;
 var charactersLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var charactersUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var charactersNumeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var charactersSpecial = [" ", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-var charactersSelected = [];
-var passwordString = "";
 
 function generatePassword() {
-
+  // initialize variables or reset from previous run
+  var charactersSelected = [];
+  var passwordString = "";
+  
   // get number of characters
   var lengthSelected = parseInt(prompt("Number of characters?"));
   console.log(lengthSelected);
@@ -80,9 +81,11 @@ function generatePassword() {
     }
     else {
       alert("At least one type of characters must be included.");
+      return "";
     }
   }
   else {
     alert("Number of characters must be at least 8 and no more than 128.");
+    return "";
   }
 }
