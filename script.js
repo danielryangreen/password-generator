@@ -26,7 +26,7 @@ var passwordString = "";
 function generatePassword() {
 
   // get number of characters
-  var lengthSelected = prompt("Number of characters?");
+  var lengthSelected = parseInt(prompt("Number of characters?"));
   console.log(lengthSelected);
 
   // validate number of characters
@@ -69,10 +69,12 @@ function generatePassword() {
       }
       console.log(charactersSelected);
 
-      // add characters to password string
+      // add random characters to password string
       for (var i = 0; i < lengthSelected; i++) {
-        passwordString = passwordString + charactersSelected[i];
-        console.log(passwordString);
+        var randomNumber = Math.floor(Math.random() * charactersSelected.length);
+        passwordString = passwordString + charactersSelected[randomNumber];
+        console.log(randomNumber);
+        console.log(charactersSelected[randomNumber]);
       }
       return passwordString;
     }
