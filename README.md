@@ -18,6 +18,8 @@ Here is a mock-up of the user interface.
 
 ![Generate Password button](Assets/03-javascript-homework-demo.png)
 ## Credits
+The list of special characters was taken from the [OWASP Foundation](https://owasp.org/www-community/password-special-characters)
+
 Starter code and mock-up were provided by [Trilogy Education Services](https://trilogyed.com/)
 ## License
 MIT License
