@@ -6,6 +6,8 @@ The password is written to a text box on the page. If the validation fails, the 
 
 The application does not guarantee that all of the selected character types will be present in the password, but the characters are chosen randomly from an array that contains all of the selected character types. A future enhancement to the application would be to automatically create another password if any of the selected character types are missing.
 
+After deploying the application, I remembered that I forgot to remove the console logs that I was using for testing. I decided to leave them in since they don't really harm anything and they would be helpful if I develop this application further someday.
+
 Deployed at [GitHub Pages](https://danielryangreen.github.io/password-generator/)
 
 See the repo at [Github](https://github.com/danielryangreen/)
